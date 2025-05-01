@@ -4,6 +4,7 @@ class Solution {
         int end = nums.length - 1;
         while (start < end) {
             int mid = (start + end) / 2;
+
             if (nums[mid] < t) {
                 start = mid + 1;
             } else if (nums[mid] > t) {
@@ -11,7 +12,9 @@ class Solution {
             } else {
                 return mid;
             }
+
         }
+
         if (t == nums[start]) {
             return start;
         } else {
